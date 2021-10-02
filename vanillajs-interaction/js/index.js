@@ -5,7 +5,7 @@ var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
   height = Math.round(window.innerHeight),
   x = window.innerWidth / 2,
   y = window.innerHeight / 2,
-  radius = 10;
+  radius = 20;
 
 document.body.appendChild(svg);
 document.body.style.background = '#222';
@@ -15,7 +15,7 @@ svg.setAttribute("height", height);
 svg.style.cursor = "pointer";
 
 function drawCirc() {
-  var st = 40;
+  var st = 30;
   var allW = Math.round(width / st);
   var allH = Math.round(height / st);
   var startY = -st / 2;
@@ -25,7 +25,7 @@ function drawCirc() {
     var circ = document.createElementNS(svgNS, "circle");
     svg.appendChild(circ);
     circ.setAttribute("r", radius);
-    circ.setAttribute("fill", "rgb(225, " + i + ", 0)");
+    circ.setAttribute("fill", "rgb(225, "+ i +", 0)");
     circ.setAttribute("stroke-width", "40");
     circ.setAttribute("stroke-opacity", "0");
     circ.setAttribute("stroke", "orangered");

@@ -1,0 +1,50 @@
+body {
+    background: #000;
+  }
+  
+  $e1: rgba(246,249,19,1);
+  $e2: rgba(2,2,1,1);
+  $e22: rgba(216,32,0,1);
+  $e3: rgba(204,204,204,0.2);
+  $e4: rgba(68,68,68,0.2);
+  $f1: rgba(221,223,227,0);
+  $sp: 80vmin;
+  $f5: 50%;
+  
+  @mixin light($point, $op1, $op2, $end1, $end2, $spoint, $sop1, $sop2, $send1, $send2, $spoint2) {
+    background: radial-gradient(ellipse at $point, rgba(245,246,246,$op1) 0%,rgba(237,238,240,$op1) 2%,rgba(221,223,227,$op2) $end1, $f1 $end2), 
+      radial-gradient(ellipse at $spoint, rgba(245,246,246,$sop1) 0%,rgba(237,238,240,$sop1) 2%,rgba(221,223,227,$sop2) $send1, $f1 $send2),     radial-gradient(ellipse at $spoint2, rgba(245,246,246,$sop1) 0%,rgba(237,238,240,$sop1) 2%,rgba(221,223,227,$sop2) $send1, $f1 $send2);
+  }
+  
+  .size {
+    width: $sp;
+    height: $sp;
+    border-radius: $f5;
+  }
+  .ps {
+    position: absolute;
+    opacity: 0.7;
+    content: '';
+  }
+  .hal {
+    margin: 10vmin auto;
+    @extend .size;
+    background: radial-gradient(ellipse at center,  $e1 0%,$e1 3%,rgba(229,81,27,1) 5%,rgba(234,91,39,1) 12%,$e22 13%,$e22 26%,rgba(117,34,1,1) 36%,$e2 59%,$e2 62%,rgba(52,52,51,0.7) 64%,rgba(68,68,68,0.4) 65%,$e3 66%,$e3 68%,$e4 73%,$e4 77%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f913', endColorstr='#c7444444',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    &:before {
+      margin: -20vmin auto;
+      @extend .size;
+      @extend .ps;
+      @include light(center, 1, 0.64, 8%, 20%, 20vmin 45vmin, 0.5, 0.35, 5%, 12%, 60vmin 45vmin);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#00dddfe3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    &:after {
+      margin: 0vmin auto;
+      @extend .size;
+      @extend .ps;
+      z-index: -1;
+      background: conic-gradient(  
+  rgba(232,232,232,1) 0%,rgba(0,0,0,1) 20%,rgba(186,186,186,1) 33%,rgba(33,33,33,1) 45%,rgba(33,33,33,1) 55%,rgba(186,186,186,1) 66%,rgba(0,0,0,1) 80%,rgba(232,232,232,1) 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00959595', endColorstr='#00828282',GradientType=0 ); /* IE6-9 */
+    }
+  }

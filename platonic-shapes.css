@@ -1,16 +1,28 @@
+body{
+    background-color:white;
+    background-image:
+        radial-gradient(midnightblue 9px, transparent 10px),
+        repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+    background-size: 30px 30px, 90px 90px;
+    background-position: 0 0;
+}
 .svg-on-square{
     width: 120px;
     height: 120px;
     border: solid black;
+    stroke-radius: 10px;
     border-radius: 10px;
-    background-color: black;
     transform: rotate(180deg);
+    overflow: hidden;
+    background: hotpink;
 }
-.svg-on-square{
-    box-shadow: 5px 5px 10 red;
+polygon{
+    fill: white;
+    stroke: red;
+    points: 40,10 200,10 45,40;
 }
 .first-circle{
-    cx: 20;
+    cx: 60;
     cy: 60;
     r: 5;
     stroke: blue;
@@ -24,4 +36,52 @@
     cx: 14;
     cy: 65;
     r: 9;
+}
+@keyframes animation-of-circle{
+    0%{
+        fill: blue;
+        transform: translateX();
+    }
+    50%{
+        fill: purple;
+        transform: translateX(50px);
+    }
+    100%{
+        fill: orangered;
+        transform: translateX(100px);
+    }
+}
+@keyframes animation-of-circle-2{
+    0%{
+        fill: blue;
+        transform: translateX();
+    }
+    50%{
+        fill: black;
+        transform: translate(-60px 100px);
+    }
+    100%{
+        fill: grey;
+        transform: translateX(100px);
+    }
+}
+.animated-ball{
+    animation: animation-of-circle 2s 2s infinite alternate ease-in-out forwards;
+}
+.animated-ball-2{
+    animation: animation-of-circle-2 2s 2s infinite alternate ease-in-out forwards;
+}
+.hide-overflow{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+div{
+    margin: auto;
+}
+.wizard{
+    transform: scale(5, 5);
+    float: left;
+    animation: animation-of-circle 2s -1.5s infinite alternate ease-in-out forwards;
 }
