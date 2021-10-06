@@ -4,13 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Setting Die Content Symbols</title>
     <link rel="stylesheet" href="svg-defs.css"/>
 </head>
 <body>
-    <svg width="300" height="300" viewBox="0 0 300 300">
+    <div  >
+    <svg id="svg-assets">
+        <!--width="300" height="300" viewBox="0 0 300 300"-->
         <title>Rapture Game Die</title>
-        
+        <desc>The components that make up a single die</desc>
+     <!--BEGIN SYMBOL CONTENT                        -->
+        <symbol id="primary-circle">
+            <circle class="circle" cx="150" cy="150" r="70" stroke-width="4" stroke="black"/>
+        </symbol>
+    
+        <symbol id="primary-triangle">
+            <polygon points="211.5,256.52112466548596 27,150.00000000000003 211.49999999999991,43.478875334514" stroke-width="4" stroke="black"/>
+        </symbol>
+        <symbol id="primary-square">
+            <polygon stroke-width="4" stroke="black" points="236.97413408594537,215 63.02586591405466,215 63.025865914054634,84 236.9741340859453,84" />
+        </symbol>
+        <symbol id="primary-hexagon">
+ 
+ 
+            <polygon stroke-width="4" stroke="black" points="240.93266739736606,202.5 150,255 59.067332602633954,202.50000000000003 59.067332602633925,97.50000000000003 149.99999999999997,45 240.93266739736606,97.50000000000003" />
+            
+            
+
+        <symbol id="dots-five">
+            <circle cx="150" cy="106" r="14" />
+            <circle cx="111" cy="139" r="14" />
+            <circle cx="189" cy="139" r="14" />
+            <circle cx="128" cy="189" r="14" />
+            <circle cx="172" cy="189" r="14" />
+        </symbol>
+        <symbol id="dots-four">
+            <circle cx="150" cy="106" r="14" />
+            <circle cx="111" cy="146" r="14" />
+            <circle cx="189" cy="146" r="14" />
+            <circle cx="150" cy="189" r="14" />
+        </symbol>
+        <symbol id="dots-three">
+            <circle cx="150" cy="106" r="14" />
+            <circle cx="111" cy="166" r="14" />
+            <circle cx="185" cy="174" r="14" />
+        </symbol>
+        <symbol id="dots-two">
+            <circle cx="136" cy="115" r="14" />
+            <circle cx="164" cy="185" r="14" />
+        </symbol>
+        <symbol id="dots-one">
+            <circle cx="150" cy="150" r="14" />
+        </symbol>
+    <!--END SYMBOL CONTENT                        -->
     </svg>
+    </div>
+
+
+    <div class="die-container">
+        <svg width="300" height="300" viewBox="0 0 300 300">
+            <g id="g-die-output">
+                <use xlink:href="#primary-hexagon" fill="white" fill-opacity="1" stroke="black" stroke-width="4" stroke-opacity="1"/>
+                <use xlink:href="#dots-two"/>
+
+            </g>
+        </svg>
+    </div>
+    <div class="die-container">
+        <svg width="300" height="300" viewBox="0 0 300 300">
+            <g id="g-die-output">
+                <use xlink:href="#dots-five"/>
+                <use xlink:href="#primary-circle" fill="white" fill-opacity="1" stroke="black" stroke-width="4" stroke-opacity="1"/>
+            </g>
+        </svg>
+    </div>
+    <div class="die-container-white">
+        <svg width="300" height="300" viewBox="0 0 300 300">
+            <g id="g-die-output">
+                <use xlink:href="#dots-three"/>
+                <use xlink:href="#primary-circle" fill="red" fill-opacity="0.0" stroke="black" stroke-width="4" stroke-opacity="1"/>
+            </g>
+        </svg>
+    </div>
+    <div class="die-container">
+        <svg width="300" height="300" viewBox="0 0 300 300">
+            <g id="g-die-output">
+                <use xlink:href="#dots-one"/>
+                <use xlink:href="#primary-square" fill="red" fill-opacity="0.0" stroke="black" stroke-width="4" stroke-opacity="1"/>
+            </g>
+        </svg>
+    </div>
 </body>
 </html>

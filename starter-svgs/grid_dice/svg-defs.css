@@ -1,0 +1,24 @@
+.die-container{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template: 1fr/1fr;
+    border: solid black;
+    border-radius: 10px;
+    background-color: red;
+    animation-name: rotate;
+    animation-duration: 4s;
+}
+.die-conteiner-white{
+    background-color: white;
+}
+.red-fill{
+
+}
+.user{
+    stroke: rebeccapurple;
+}
+@keyframes rotate{
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
