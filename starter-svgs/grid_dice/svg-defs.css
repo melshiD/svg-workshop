@@ -1,22 +1,44 @@
+.quick-grid{
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    border-top: 23px solid black;
+    border-bottom: 22px double black;
+    justify-content: space-between;
+    
+}
 .die-container{
-    width: 300px;
-    height: 300px;
+    width: 300;
+    height: 300;
     display: grid;
     grid-template: 1fr/1fr;
     border: solid black;
     border-radius: 10px;
     background-color: red;
     animation-name: rotate;
-    animation-duration: 4s;
+    animation-duration: 400s;
+    animation-direction: reverse;
+    overflow: hidden;
 }
-.die-conteiner-white{
+.die-container-white{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template: 1fr/1fr;
+    border: solid black;
+    border-radius: 10px;
     background-color: white;
+    animation-name: rotate;
+    animation-duration: 600s;
 }
 .red-fill{
 
 }
 .user{
     stroke: rebeccapurple;
+}
+#dots-five{
+    box-shadow: 4px 4px 2px drakgrey;
 }
 @keyframes rotate{
     from{transform: rotate(0);}

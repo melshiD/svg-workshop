@@ -16,32 +16,18 @@
         <desc>The components that make up a single die</desc>
      <!--BEGIN SYMBOL CONTENT                        -->
         <symbol id="primary-circle">
-            <circle cx="150" cy="150" r="73" />
+            <circle cx="150" cy="150" r="73" stroke-width="2" stroke="black"/>
+            <circle class="circle" cx="150" cy="150" r="70" stroke-width="4"/>
+            <circle cx="150" cy="150" r="66" stroke-width="2" stroke="black"/>
         </symbol>
-        <symbol id="mid-circle">
-            <circle cx="150" cy="150" r="70" />
-        </symbol>
-        <symbol id="top-circle">
-            <circle cx="150" cy="150" r="66" />
-        </symbol>
-
-
         <symbol id="primary-triangle">
-            <polygon points="211.5,256.52112466548596 27,150.00000000000003 211.49999999999991,43.478875334514" stroke-width="4" stroke="black"/>
+            <polygon stroke-width="4" points="211.5,256.52112466548596 27,150.00000000000003 211.49999999999991,43.478875334514" />
         </symbol>
         <symbol id="primary-square">
-            <polygon stroke-width="4" stroke="black" points="236.97413408594537,215 63.02586591405466,215 63.025865914054634,84 236.9741340859453,84" />
+            <polygon stroke-width="4" points="236.97413408594537,215 63.02586591405466,215 63.025865914054634,84 236.9741340859453,84" />
         </symbol>
-
         <symbol id="primary-hexagon">
-            <polygon stroke-width="2" stroke="black" points="237.46856578222832,200.5 150,251 62.53143421777172,200.50000000000003 62.531434217771675,99.50000000000003 149.99999999999997,49 237.46856578222832,99.50000000000003" />
-        </symbol>
-        <symbol id="mid-hexagon">
-            <polygon stroke-width="4" points="234.870489570875,199 150,248 65.12951042912503,199.00000000000003 65.12951042912499,101.00000000000003 149.99999999999997,52 234.870489570875,101.00000000000003" />
-        </symbol>
-        <symbol id="top-hexagon">
-            <polygon stroke-width="3" stroke="black" points="231.40638795573724,197 150,244 68.59361204426278,197.00000000000003 68.59361204426276,103.00000000000003 149.99999999999997,56 231.40638795573724,103.00000000000003" />
-        </symbol>
+            <polygon stroke-width="4" points="240.93266739736606,202.5 150,255 59.067332602633954,202.50000000000003 59.067332602633925,97.50000000000003 149.99999999999997,45 240.93266739736606,97.50000000000003" />
         <symbol id="dots-five">
             <circle cx="150" cy="106" r="14" />
             <circle cx="111" cy="139" r="14" />
@@ -71,34 +57,28 @@
     </svg>
     </div>
 
-    <div class="quick-grid">
-    <div class="die-container-white">
+
+    <div class="die-container">
         <svg width="300" height="300" viewBox="0 0 300 300">
-            <g id="g-die-output">
-                <use xlink:href="#primary-hexagon" stroke-linejoin="round" fill="white" fill-opacity="1" />
-                <use xlink:href="#mid-hexagon" stroke-linejoin="round" fill="red" stroke="white"/>
-                <use xlink:href="#top-hexagon" fill="white"/>
-                <use xlink:href="#dots-five"/>
+            <g id="g-die-output1">
+                <use xlink:href="#primary-hexagon" fill="white" fill-opacity="1" stroke="black" stroke-width="4" stroke-opacity="1"/>
+                <use xlink:href="#dots-two"/>
 
             </g>
         </svg>
     </div>
-    <div class="die-container">
+    <div id="white-die" class="die-container">
         <svg width="300" height="300" viewBox="0 0 300 300">
-            <g id="g-die-output">
-                <use xlink:href="#primary-circle" fill="white" stroke="black" stroke-width="2" />
-                <use xlink:href="#mid-circle" fill="white" stroke="black" stroke-width="4" />
-                <use xlink:href="#top-circle" fill="white" stroke="black" stroke-width="2" />
+            <g id="g-die-output2">
+                <use xlink:href="#primary-circle" fill="white" fill-opacity="1" stroke="black" stroke-width="4" stroke-opacity="1"/>
                 <use xlink:href="#dots-five"/>
             </g>
         </svg>
     </div>
     <div class="die-container-white">
         <svg width="300" height="300" viewBox="0 0 300 300">
-            <g id="g-die-output">
-                <use xlink:href="#primary-circle" fill="white" stroke="black" stroke-width="2" />
-                <use xlink:href="#mid-circle" fill="white" stroke="black" stroke-width="2" />
-                <use xlink:href="#top-circle" fill="red" stroke="black" stroke-width="2" />
+            <g id="g-die-output3">
+                <use xlink:href="#primary-circle" fill="white" fill-opacity="1" stroke="red" stroke-width="4" stroke-opacity="1"/>
                 <use xlink:href="#dots-three"/>
 
             </g>
@@ -106,13 +86,16 @@
     </div>
     <div class="die-container">
         <svg width="300" height="300" viewBox="0 0 300 300">
-            <g id="g-die-output3">
+            <g id="g-die-output4">
                 <use xlink:href="#primary-square" fill="red" stroke-width="4" stroke-opacity="1"/>
                 <use xlink:href="#dots-one"/>
 
             </g>
         </svg>
     </div>
-    </div>
+
+    <p id="change-color">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('green');">red</button>
 </body>
 </html>
