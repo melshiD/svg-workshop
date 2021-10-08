@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="svg-defs.css"/>
     <script src="GridDice.js" rel="javascript"></script>
 </head>
-<body>
+<body id="body-for-background">
     <div  >
     <svg id="svg-assets">
         <!--width="300" height="300" viewBox="0 0 300 300"-->
@@ -72,9 +72,9 @@
     </div>
 
     <div class="quick-grid">
-    <div class="die-container-white">
+    <div class="die-container" id="die-1" background-color = "pink">
         <svg width="300" height="300" viewBox="0 0 300 300">
-            <g id="g-die-output">
+            <g id="g-die-output-1">
                 <use xlink:href="#primary-hexagon" stroke-linejoin="round" fill="white" fill-opacity="1" />
                 <use xlink:href="#mid-hexagon" stroke-linejoin="round" fill="red" stroke="white"/>
                 <use xlink:href="#top-hexagon" fill="white"/>
@@ -114,5 +114,12 @@
         </svg>
     </div>
     </div>
+    <button onclick = "testScript()">Give it a shot</button>
+    <script>
+        function testScript(){
+            document.getElementById("die-1").style.backgroundColor = "pink";
+
+        }
+    </script>
 </body>
 </html>
